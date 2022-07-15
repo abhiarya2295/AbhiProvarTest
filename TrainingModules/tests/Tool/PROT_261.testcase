@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="11">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="3" title="Set Values: var.City">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">var.FirstName</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Abhishek</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">var.LastName</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Arya</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">var.City</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Gurgaon</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="4" title="Write: {var}=&gt;templates/ExcelData.xlsx">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="var"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget">
+            <workbookPath class="value" valueClass="string">templates/ExcelData.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">OpportunityAppend</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">templates/ExcelData.xlsx</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="12" title="For Each: =&gt;">
+      <arguments>
+        <argument id="list"/>
+        <argument id="fromItem">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="valueName"/>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="13">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" name="Split" testItemId="5" title="Split: 1,2,3,4,5=&gt;,=&gt;Tokens">
+              <arguments>
+                <argument id="input">
+                  <value class="value" valueClass="string">1,2,3,4,5</value>
+                </argument>
+                <argument id="separator">
+                  <value class="value" valueClass="string">,</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Tokens</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="11" title="Write: {Tokens}=&gt;templates/ExcelData.xlsx">
+              <arguments>
+                <argument id="data">
+                  <value class="variable">
+                    <path element="Tokens"/>
+                  </value>
+                </argument>
+                <argument id="dataUrl">
+                  <value class="excelTarget">
+                    <workbookPath class="value" valueClass="string">templates/ExcelData.xlsx</workbookPath>
+                    <worksheetName class="value" valueClass="string">OpportunityCondition</worksheetName>
+                  </value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">templates/ExcelData.xlsx</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

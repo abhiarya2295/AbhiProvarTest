@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: date_Today">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_Today</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: date_Now">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_Now</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="NOW"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="3" title="Set Values: date_Today_1">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_Today_1</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="decimal">1</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: date_Today_past1">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_Today_past1</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="string">-1</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: date_1_Month">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_1_Month</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="decimal">1</value>
+                  </argument>
+                  <argument id="unit">
+                    <value class="variable">
+                      <path element="MONTH"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="6" title="Set Values: date_pastMonth">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_pastMonth</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="string">-1</value>
+                  </argument>
+                  <argument id="unit">
+                    <value class="variable">
+                      <path element="MONTH"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="7" title="Set Values: date_NextHour">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_NextHour</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="decimal">1</value>
+                  </argument>
+                  <argument id="unit">
+                    <value class="variable">
+                      <path element="HOUR"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="8" title="Set Values: date_pastHour">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">date_pastHour</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateAdd">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="amount">
+                    <value class="value" valueClass="string">-1</value>
+                  </argument>
+                  <argument id="unit">
+                    <value class="variable">
+                      <path element="HOUR"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="10" title="Set Values: GMTformatdate">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">GMTformatdate</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateFormat">
+                  <argument id="date">
+                    <value class="funcCall" id="DateAdd">
+                      <argument id="date">
+                        <value class="variable">
+                          <path element="NOW"/>
+                        </value>
+                      </argument>
+                    </value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">dd/MM/yyyy HH:mm</value>
+                  </argument>
+                  <argument id="timeZone">
+                    <value class="value" valueClass="string">GMT+5:30</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="12" title="Salesforce Connect: RegressionOrg (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">RegressionOrg</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">RegressionOrg</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+  </steps>
+  <tags/>
+</testCase>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="14" registryId="6ddb012d-28e1-4cb9-a355-925734601f0f" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: {resultName} (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">DemoOrg</value>
+        </argument>
+        <argument argId="1586e2f1-66e1-4cd3-990d-c18962ec48e3" id="resultName">
+          <value class="variable">
+            <path element="resultName"/>
+          </value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="fdcd8f39-aa7c-4dd7-be02-11dbd6fc6f05" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: LastName">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">FirstName</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Abhishek</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">LastName</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Arya</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:1586e2f1-66e1-4cd3-990d-c18962ec48e3" name="resultName" title="Result Name">
+      <summary>The name that the resulting connection will be stored under.</summary>
+      <type>
+        <textType/>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="FirstName" title="FirstName">
+      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="FirstName"/>
+      </sourceValue>
+    </param>
+    <param name="LastName" title="LastName">
+      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="LastName"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="resultName">
+      <value class="variable">
+        <path element="resultName"/>
+      </value>
+    </argument>
+  </args>
+  <outputArgs>
+    <outputArgument id="FirstName">
+      <name class="value" valueClass="string">FirstName</name>
+    </outputArgument>
+    <outputArgument id="LastName">
+      <name class="value" valueClass="string">LastName</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>

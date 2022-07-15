@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="7">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: Value">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Value</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">3.999</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: RoundDownValue">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">RoundDownValue</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="Round">
+                  <argument id="number">
+                    <value class="variable">
+                      <path element="Value"/>
+                    </value>
+                  </argument>
+                  <argument id="toDecimalPlaces">
+                    <value class="value" valueClass="decimal">2</value>
+                  </argument>
+                  <argument id="roundingMode">
+                    <value class="variable">
+                      <path element="DOWN"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: RoundUpValue">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">RoundUpValue</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="Round">
+                  <argument id="number">
+                    <value class="variable">
+                      <path element="Value"/>
+                    </value>
+                  </argument>
+                  <argument id="toDecimalPlaces">
+                    <value class="value" valueClass="decimal">2</value>
+                  </argument>
+                  <argument id="roundingMode">
+                    <value class="variable">
+                      <path element="UP"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: RoundFloorValue">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">RoundFloorValue</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="Round">
+                  <argument id="number">
+                    <value class="variable">
+                      <path element="Value"/>
+                    </value>
+                  </argument>
+                  <argument id="toDecimalPlaces">
+                    <value class="value" valueClass="decimal">1</value>
+                  </argument>
+                  <argument id="roundingMode">
+                    <value class="variable">
+                      <path element="FLOOR"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <tags/>
+</testCase>

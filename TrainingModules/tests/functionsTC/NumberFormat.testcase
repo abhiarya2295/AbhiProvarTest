@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="9">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: formattedNumber2">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">formattedNumber</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="NumberFormat">
+                  <argument id="numberToFormat">
+                    <value class="value" valueClass="decimal">12333456.7847</value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">##,#####,####</value>
+                  </argument>
+                  <argument id="language">
+                    <value class="value" valueClass="string">en</value>
+                  </argument>
+                  <argument id="country">
+                    <value class="value" valueClass="string">US</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">formattedNumber2</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="NumberFormat">
+                  <argument id="numberToFormat">
+                    <value class="value" valueClass="string">324567.89</value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">PLN ###,###.##</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

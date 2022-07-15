@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="7">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="3" title="Set Values: a">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">a</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateParse"/>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: DateParse_StringtoDate">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">DateParse_StringtoDate</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateParse">
+                  <argument id="date">
+                    <value class="value" valueClass="string">2015-03-15</value>
+                  </argument>
+                  <argument id="inputFormat">
+                    <value class="value" valueClass="string">yyyy-MM-dd</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: DateParse_ChangeFormat">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">DateParse_ChangeFormat</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateParse">
+                  <argument id="date">
+                    <value class="value" valueClass="string">2015-03-15</value>
+                  </argument>
+                  <argument id="inputFormat">
+                    <value class="value" valueClass="string">yyyy-MM-dd</value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">MM-dd-yyyy</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <tags/>
+</testCase>

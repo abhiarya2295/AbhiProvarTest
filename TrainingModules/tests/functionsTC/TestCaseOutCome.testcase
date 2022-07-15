@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="20">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: intNumber">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">intNumber</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">10</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="3" title="Set Values: zero">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">zero</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">0</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+      <expectedExceptions>
+        <expectedException comparisonType="Contains" title="ABC">
+          <assertionValue class="value" valueClass="string">XYZ</assertionValue>
+        </expectedException>
+      </expectedExceptions>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Fail" name="Fail" testItemId="22" title="Fail Test: FailingStep">
+      <arguments>
+        <argument id="message">
+          <value class="value" valueClass="string">FailingStep</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: testCaseOutCome1">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">testCaseOutCome1</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="TestCaseOutcome"/>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="8" title="Set Values: result">
+      <tags/>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">result</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="div">
+                  <lhs class="variable" topLevel="true">
+                    <path element="intNumber"/>
+                  </lhs>
+                  <rhs class="variable" topLevel="true">
+                    <path element="zero"/>
+                  </rhs>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+      <expectedExceptions>
+        <expectedException assertionTarget="ExceptionClass" caseInsensitive="true" comparisonType="Contains" failIfNotThrown="true" title="Division by ZERO">
+          <assertionValue class="value" valueClass="string">ArithmeticException</assertionValue>
+        </expectedException>
+      </expectedExceptions>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Finally" name="Finally" testItemId="9" title="Finally: This will execute even if there is an exception in above step">
+      <tags/>
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">This will execute even if there is an exception in above step</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="17">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="18" title="Assert: true EqualTo true">
+              <arguments>
+                <argument id="expectedValue">
+                  <value class="value" valueClass="string">true</value>
+                </argument>
+                <argument id="actualValue">
+                  <value class="value" valueClass="string">true</value>
+                </argument>
+                <argument id="comparisonType">
+                  <value class="value" valueClass="string">EqualTo</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="retainDecimals">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="nullGreater">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="matchMultiLine">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="matchDotAll">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="failureMessage"/>
+                <argument id="numeric">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+              </arguments>
+              <expectedExceptions>
+                <expectedException comparisonType="Contains" title="ABC">
+                  <assertionValue class="value" valueClass="string">XYZ</assertionValue>
+                </expectedException>
+              </expectedExceptions>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="6" title="Set Values: testCaseOutCome2">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">testCaseOutCome2</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="TestCaseOutcome"/>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+  <tags/>
+</testCase>

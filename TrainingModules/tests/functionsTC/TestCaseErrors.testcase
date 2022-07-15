@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase failureBehaviour="Continue" id="8">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="4" title="UI Assert">
+      <arguments>
+        <argument id="fieldAssertions">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="columnAssertions">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="pageAssertions">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultName">
+          <value class="invalid">{Not(-98)}</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="beforeWait"/>
+        <argument id="autoRetry"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="7" title="UI Assert">
+      <arguments>
+        <argument id="fieldAssertions">
+          <value class="valueList" mutable="Mutable">
+            <uiFieldAssertion/>
+          </value>
+        </argument>
+        <argument id="columnAssertions">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="pageAssertions">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">dadsadwad</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="beforeWait"/>
+        <argument id="autoRetry"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: err">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">err</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="TestCaseErrors"/>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="0">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="3" title="For Each: {SourceData}=&gt;Row">
+      <arguments>
+        <argument id="list">
+          <value class="variable">
+            <path element="SourceData"/>
+          </value>
+        </argument>
+        <argument id="fromItem">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="valueName">
+          <value class="value" valueClass="string">Row</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData" variableScope="Test">
+          <cacheToken>C:/Users/abhishek.arya/Provar/Zephyr/TrainingModules/templates/AND Gate.xlsx;1657865226907</cacheToken>
+          <cachedParameters>
+            <apiParam name="ColumnNumber"/>
+            <apiParam name="Input1"/>
+            <apiParam name="_0"/>
+            <apiParam name="_1"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstColumnOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/AND Gate.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+            <valuesRange class="value" valueClass="string">A1:C5</valuesRange>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="substeps" testItemId="4">
+          <steps/>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

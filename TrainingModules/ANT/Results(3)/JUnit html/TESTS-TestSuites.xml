@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="3" hostname="ibm-abhishekarya" id="0" name="TrainingModules/tests" package="" skipped="0" tests="20" time="2.154" timestamp="Thu Jul 07 16:29:48 IST 2022">
+	    <properties>
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="testEnvironment" value="" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+		      <property name="projectPath" value=".." />
+
+		      <property name="salesforceMetadataCache" value="Reuse" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="testOutputLevel" value="INFO" />
+
+		      <property name="webBrowserType" value="Chrome" />
+
+		      <property name="resultsPath" value="../ANT/Results" />
+
+		      <property name="webBrowserConfiguration" value="Full Screen" />
+
+		      <property name="projectCachePath" value="C:\Users\abhishek.arya\Provar\Zephyr\TrainingModules\ANT\..\..\.provarCaches" />
+
+	    </properties>
+
+	    <testcase classname="tests/functionsTC\Count.testcase" name="Count.testcase" time="0.779">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\DateAdd.testcase" name="DateAdd.testcase" time="0.086">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\DateFormat.testcase" name="DateFormat.testcase" time="0.047">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\DateParse.testcase" name="DateParse.testcase" time="0.027">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\GetSelectedEnvironment.testcase" name="GetSelectedEnvironment.testcase" time="0.01">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\IsSorted.testcase" name="IsSorted.testcase" time="0.902">
+		      <failure message="Execution failed"><![CDATA[Connection details not found.  Connection Name: AbhishekSF]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/functionsTC\Not.testcase" name="Not.testcase" time="0.026">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\NumberFormat.testcase" name="NumberFormat.testcase" time="0.003">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\Round.testcase" name="Round.testcase" time="0.035">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\StringNormalize.testcase" name="StringNormalize.testcase" time="0.017">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\StringReplace.testcase" name="StringReplace.testcase" time="0.0">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\StringTrim.testcase" name="StringTrim.testcase" time="0.037">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\TestCaseErrors.testcase" name="TestCaseErrors.testcase" time="0.028">
+		      <failure message="Execution failed"><![CDATA[Value does not resolve to a primitive type: com.provar.core.model.base.java.InvalidExpressionValueImpl]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/functionsTC\TestCaseNameRetrieveUsingFunction.testcase" name="TestCaseNameRetrieveUsingFunction.testcase" time="0.013">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\TestCaseOutCome.testcase" name="TestCaseOutCome.testcase" time="0.028">
+		      <failure message="Execution failed"><![CDATA[FailingStep]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/functionsTC\TestCasePath.testcase" name="TestCasePath.testcase" time="0.023">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\TestCaseSuccessful.testcase" name="TestCaseSuccessful.testcase" time="0.034">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\TestRnErrors.testcase" name="TestRnErrors.testcase" time="0.012">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\getEnviornmentVariable.testcase" name="getEnviornmentVariable.testcase" time="0.018">
+	</testcase>
+
+	    <testcase classname="tests/functionsTC\uniqueID.testcase" name="uniqueID.testcase" time="0.009">
+	</testcase>
+
+  </testsuite>
+</testsuites>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="7">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1" title="Set Values: datefFormat">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">datefFormat</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateFormat"/>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="2" title="Set Values: DateFormat_ddMMyyyy">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">DateFormat_ddMMyyyy</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateFormat">
+                  <argument id="date">
+                    <value class="variable">
+                      <path element="TODAY"/>
+                    </value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">dd-MM-yyyy</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="3" title="Set Values: dateFormat_MMddYYYY_EST">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">dateFormat_MMddYYYY_EST</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="compound">
+                  <parts>
+                    <funcCall id="DateFormat">
+                      <argument id="date">
+                        <value class="variable">
+                          <path element="NOW"/>
+                        </value>
+                      </argument>
+                      <argument id="outputFormat">
+                        <value class="value" valueClass="string">MM-dd-YYYY hh a zzzz</value>
+                      </argument>
+                      <argument id="timeZone">
+                        <value class="value" valueClass="string">GMT</value>
+                      </argument>
+                    </funcCall>
+                    <value valueClass="string"> </value>
+                  </parts>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="4" title="Set Values: dateFormat_withDateAdd">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">dateFormat_withDateAdd</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="DateFormat">
+                  <argument id="date">
+                    <value class="funcCall" id="DateAdd">
+                      <argument id="date">
+                        <value class="variable">
+                          <path element="TODAY"/>
+                        </value>
+                      </argument>
+                      <argument id="amount">
+                        <value class="value" valueClass="decimal">5</value>
+                      </argument>
+                    </value>
+                  </argument>
+                  <argument id="outputFormat">
+                    <value class="value" valueClass="string">MM-dd-YYYY</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <tags/>
+</testCase>
